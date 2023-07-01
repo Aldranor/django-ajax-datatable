@@ -789,7 +789,7 @@ class AjaxDatatableView(View):
                 model = fields[m2m_field].related_model
 
                 prefetch_related.add(Prefetch(m2m_field,
-                                              queryset=model.objects.only(m2m_name).order_by(m2m_name),
+                                              queryset=model.objects.order_by(m2m_name),
                                               to_attr=f'{m2m_field}_list',
                                               ))
             else:
