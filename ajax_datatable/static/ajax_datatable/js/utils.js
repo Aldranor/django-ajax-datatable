@@ -177,7 +177,8 @@ window.AjaxDatatableViewUtils = (function() {
             });
             filter_row += '</tr>';
 
-            var wrapper = table.closest('.dataTables_wrapper');
+            var wrapper = table.closest('.dt-container');
+            
             $(filter_row).appendTo(
                 wrapper.find('thead')
             );
