@@ -326,7 +326,7 @@ window.AjaxDatatableViewUtils = (function() {
                 _options.fn_daterange_widget_initialize(table, data);
             }
             else {
-                var wrapper = table.closest('.dataTables_wrapper');
+                var wrapper = table.closest('.dt-container');
                 var toolbar = wrapper.find(".toolbar");
                 toolbar.html(
                     '<div class="daterange" style="float: left; margin-right: 6px;">' +
@@ -354,7 +354,7 @@ window.AjaxDatatableViewUtils = (function() {
 
 
     function _write_footer(table, html) {
-        var wrapper = table.closest('.dataTables_wrapper');
+        var wrapper = table.closest('.dt-container');
         var footer = wrapper.find('.dataTables_extraFooter');
         if (footer.length <= 0) {
             $('<div class="dataTables_extraFooter"></div>').appendTo(wrapper);
@@ -364,7 +364,7 @@ window.AjaxDatatableViewUtils = (function() {
     }
 
     function _write_toolbar_message(table, html) {
-        var wrapper = table.closest('.dataTables_wrapper');
+        var wrapper = table.closest('.dt-container');
         var toolbar = wrapper.find('.toolbar');
         var toolbar_message = toolbar.find('.dataTables_extraToolbar');
         if (toolbar_message.length <= 0) {
